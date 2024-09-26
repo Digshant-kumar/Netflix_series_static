@@ -47,10 +47,12 @@ const NetflixSeries = () => {
   return (
     <>
       <ul className="grid grid-three--cols">
-        {seriesData.map((curElem) => (
-          //here it is single line so no need to write return
-          <SeriesCard key={curElem.id} data={curElem} /> //curElem(Props)
-        ))}
+        {seriesData.map((curElem) => {
+          return (
+            //here it is single line so no need to write return
+            <SeriesCard key={curElem.id} data={curElem} /> //curElem(Props)
+          );
+        })}
       </ul>
     </>
   );

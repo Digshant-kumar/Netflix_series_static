@@ -1,3 +1,5 @@
+import styles from "./Netflix.module.css";
+
 const SeriesCard = ({ data }) => {
   //   const { data } = props;   //Destructuring
   const { img_url, name, rating, description, genre, cast, watch_url } = data; //Destructuring further. Instead of props.data we wrote data cause above we have again destructured the parameter from (props) to ({data})
@@ -13,20 +15,20 @@ const SeriesCard = ({ data }) => {
     cursor: "pointer",
   };
 
-  const ratingClass = rating >= 8.5 ? "super_hit" : "average";
+  const ratingClass = rating >= 8.5 ? styles.super_hit : styles.average;
 
   return (
-    <li className="card">
+    <li className={styles.card}>
       <div>
         <img src={img_url} alt={name} height="250vh" />
       </div>
-      <div className="card-content">
+      <div className={styles["card-content"]}>
         <h2>Name: {name} </h2>
         <h3>
           Rating:
           <span
             // className={`rating ${rating >= 8.5 ? "super_hit" : "average"} `}
-            className={`rating ${ratingClass}`}
+            className={`${styles.rating} ${ratingClass}`}
           >
             {rating}
           </span>
