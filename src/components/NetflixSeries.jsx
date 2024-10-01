@@ -11,10 +11,10 @@
 
 //   let age = 18;
 
-//   // let canWatch = "Watch Now";
-//   // if (age < 18) {
-//   //   canWatch = "Not Available";
-//   // }
+// let canWatch = "Watch Now";
+// if (age < 18) {
+//   canWatch = "Not Available";
+// }
 
 //   const canWatch = () => {
 //     if (age >= 18) return "Watch Now";
