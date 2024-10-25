@@ -1,6 +1,7 @@
 import styles from "./Netflix.module.css";
 
 const SeriesCard = ({ data }) => {
+  //({props})
   //   const { data } = props;   //Destructuring
   const { img_url, name, rating, description, genre, cast, watch_url } = data; //Destructuring further. Instead of props.data we wrote data cause above we have again destructured the parameter from (props) to ({data})
 
